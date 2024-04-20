@@ -1,0 +1,59 @@
+﻿@page
+@model vCatalogRazor.Pages.profesor.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Profesor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Profesor.Grad" class="control-label"></label>
+                <input asp-for="Profesor.Grad" class="form-control" />
+                <span asp-validation-for="Profesor.Grad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profesor.Nume" class="control-label"></label>
+                <input asp-for="Profesor.Nume" class="form-control" />
+                <span asp-validation-for="Profesor.Nume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profesor.Prenume" class="control-label"></label>
+                <input asp-for="Profesor.Prenume" class="form-control" />
+                <span asp-validation-for="Profesor.Prenume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profesor.Functie" class="control-label"></label>
+                <input asp-for="Profesor.Functie" class="form-control" />
+                <span asp-validation-for="Profesor.Functie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profesor.DataAngajare" class="control-label"></label>
+                <input asp-for="Profesor.DataAngajare" class="form-control" />
+                <span asp-validation-for="Profesor.DataAngajare" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Profesor.IsDeleted" /> @Html.DisplayNameFor(model => model.Profesor.IsDeleted)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

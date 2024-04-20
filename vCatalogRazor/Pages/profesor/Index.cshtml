@@ -1,53 +1,59 @@
 ﻿@page
-@model vCatalogRazor.Pages.clasa.IndexModel
+@model vCatalogRazor.Pages.profesor.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Listă profesori</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Adaugă profesor</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Clasa[0].Nume)
+                @Html.DisplayNameFor(model => model.ProfesoriList[0].Grad)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Clasa[0].Descriere)
+                @Html.DisplayNameFor(model => model.ProfesoriList[0].Nume)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Clasa[0].IsDeleted)
+                @Html.DisplayNameFor(model => model.ProfesoriList[0].Prenume)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Clasa[0].Promotie)
+                @Html.DisplayNameFor(model => model.ProfesoriList[0].Functie)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Clasa[0].Profesor)
+                @Html.DisplayNameFor(model => model.ProfesoriList[0].DataAngajare)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfesoriList[0].IsDeleted)
+            </th>
+            <th>Acțiuni</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Clasa) {
+@foreach (var item in Model.ProfesoriList) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grad)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nume)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Descriere)
+                @Html.DisplayFor(modelItem => item.Prenume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Functie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataAngajare)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsDeleted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Promotie.Descriere)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Profesor.Grad)
             </td>
             <td>
                     <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm mx-1">

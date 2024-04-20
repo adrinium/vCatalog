@@ -14,8 +14,9 @@ namespace vCatalogRazor.Models
         [Required]
         public string? Prenume { get; set; }
         public string? Functie { get; set; }
-        [AllowNull]
-        public DateOnly DataAngajare { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = false)]
+        public DateTime? DataAngajare { get; set; }
         [Required]
         public bool IsDeleted { get; set; }
 

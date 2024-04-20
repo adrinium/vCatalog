@@ -26,26 +26,30 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Promotie) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nume)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descriere)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsActive)
-            </td>
-            <td>
+        @foreach (var item in Model.Promotie)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nume)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descriere)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
                     <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm mx-1">
-                        <i class="bi bi-pencil"></i> Editare</a>
+                        <i class="bi bi-pencil"></i> Editare
+                    </a>
                     <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-outline-success btn-sm mx-1">
-                        <i class="bi bi-list"></i> Detalii</a>
-                <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm mx-1">
-                    <i class="bi bi-trash-fill"></i> Ștergere</a>
-            </td>
-        </tr>
-}
+                        <i class="bi bi-list"></i> Detalii
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm mx-1">
+                        <i class="bi bi-trash-fill"></i> Ștergere
+                    </a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

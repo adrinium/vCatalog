@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using vCatalogRazor.Data;
 using vCatalogRazor.Models;
 
-namespace vCatalogRazor.Pages.clasa
+namespace vCatalogRazor.Pages.profesor
 {
     public class IndexModel : PageModel
     {
@@ -19,14 +19,11 @@ namespace vCatalogRazor.Pages.clasa
             _context = context;
         }
 
-        public IList<Clasa> Clasa { get;set; } = default!;
+        public IList<Profesor> ProfesoriList { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            
-            Clasa = await _context.Clase
-                .Include(c => c.Profesor)
-                .Include(c => c.Promotie).ToListAsync();
+            ProfesoriList = await _context.Profesori.ToListAsync();
         }
     }
 }
