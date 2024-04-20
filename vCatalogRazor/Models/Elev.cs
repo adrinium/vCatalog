@@ -54,5 +54,9 @@ namespace vCatalogRazor.Models
         public int? ClasaId { get; set; }
         public Clasa? Clasa { get; set; }
 
+        //collection navigation
+        public ICollection<Nota> Note { get; set; } = new List<Nota>();
+
+
     }
 }

@@ -22,5 +22,7 @@ namespace vCatalogRazor.Models
 
         //collection navigation
         public ICollection<Clasa> Clase { get; } = new List<Clasa>();
+
+        public ICollection<Nota> Note { get; set; } = new List<Nota>();
     }
 }

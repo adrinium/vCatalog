@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using vCatalogRazor.Data;
 
@@ -11,9 +12,11 @@ using vCatalogRazor.Data;
 namespace vCatalogRazor.Migrations
 {
     [DbContext(typeof(CatalogDbContext))]
-    partial class CatalogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240420151657_AdaugareTabelTipNota")]
+    partial class AdaugareTabelTipNota
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -206,60 +209,6 @@ namespace vCatalogRazor.Migrations
                     b.ToTable("Module");
                 });
 
-            modelBuilder.Entity("vCatalogRazor.Models.Nota", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DataAcordare")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ElevId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ModulId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("NotShowLate")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ProfesorId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TipNotaId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Valoare")
-                        .HasColumnType("decimal(4,2)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ElevId");
-
-                    b.HasIndex("ModulId");
-
-                    b.HasIndex("ProfesorId");
-
-                    b.HasIndex("TipNotaId");
-
-                    b.ToTable("Note");
-                });
-
             modelBuilder.Entity("vCatalogRazor.Models.Profesor", b =>
                 {
                     b.Property<int>("Id")
@@ -382,61 +331,14 @@ namespace vCatalogRazor.Migrations
                     b.Navigation("Promotie");
                 });
 
-            modelBuilder.Entity("vCatalogRazor.Models.Nota", b =>
-                {
-                    b.HasOne("vCatalogRazor.Models.Elev", "Elev")
-                        .WithMany("Note")
-                        .HasForeignKey("ElevId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("vCatalogRazor.Models.Modul", "Modul")
-                        .WithMany("Note")
-                        .HasForeignKey("ModulId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("vCatalogRazor.Models.Profesor", "Profesor")
-                        .WithMany("Note")
-                        .HasForeignKey("ProfesorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("vCatalogRazor.Models.TipNota", "TipNota")
-                        .WithMany()
-                        .HasForeignKey("TipNotaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Elev");
-
-                    b.Navigation("Modul");
-
-                    b.Navigation("Profesor");
-
-                    b.Navigation("TipNota");
-                });
-
             modelBuilder.Entity("vCatalogRazor.Models.Clasa", b =>
                 {
                     b.Navigation("Elevi");
                 });
 
-            modelBuilder.Entity("vCatalogRazor.Models.Elev", b =>
-                {
-                    b.Navigation("Note");
-                });
-
-            modelBuilder.Entity("vCatalogRazor.Models.Modul", b =>
-                {
-                    b.Navigation("Note");
-                });
-
             modelBuilder.Entity("vCatalogRazor.Models.Profesor", b =>
                 {
                     b.Navigation("Clase");
-
-                    b.Navigation("Note");
                 });
 
             modelBuilder.Entity("vCatalogRazor.Models.Promotie", b =>

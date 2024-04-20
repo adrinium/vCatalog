@@ -20,5 +20,7 @@ namespace vCatalogRazor.Models
         public int PromotieId { get; set; }
         public Promotie Promotie { get; set; } = null!;
 
+        // collection navigation
+        public ICollection<Nota> Note { get; set; } = new List<Nota>();
     }
 }
