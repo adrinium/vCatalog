@@ -12,6 +12,8 @@ namespace vCatalogRazor.Data
         public DbSet<Promotie>  Promotii { get; set; }
         public DbSet<Clasa> Clase { get; set; }
         public DbSet<Profesor> Profesori { get; set; }
+        public DbSet<Elev> Elevi { get; set; }
+        public DbSet<Modul> Module { get; set; }
 
     }
 }

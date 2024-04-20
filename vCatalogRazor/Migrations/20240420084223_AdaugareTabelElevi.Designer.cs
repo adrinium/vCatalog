@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using vCatalogRazor.Data;
 
@@ -11,9 +12,11 @@ using vCatalogRazor.Data;
 namespace vCatalogRazor.Migrations
 {
     [DbContext(typeof(CatalogDbContext))]
-    partial class CatalogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240420084223_AdaugareTabelElevi")]
+    partial class AdaugareTabelElevi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,8 +107,8 @@ namespace vCatalogRazor.Migrations
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("DataNastere")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly?>("DataNastere")
+                        .HasColumnType("date");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -170,40 +173,6 @@ namespace vCatalogRazor.Migrations
                     b.HasIndex("PromotieId");
 
                     b.ToTable("Elevi");
-                });
-
-            modelBuilder.Entity("vCatalogRazor.Models.Modul", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Descriere")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IsActiveInAvg")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IsDeleted")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Numar")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Nume")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PromotieId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PromotieId");
-
-                    b.ToTable("Module");
                 });
 
             modelBuilder.Entity("vCatalogRazor.Models.Profesor", b =>
@@ -298,17 +267,6 @@ namespace vCatalogRazor.Migrations
                     b.Navigation("Promotie");
                 });
 
-            modelBuilder.Entity("vCatalogRazor.Models.Modul", b =>
-                {
-                    b.HasOne("vCatalogRazor.Models.Promotie", "Promotie")
-                        .WithMany("Module")
-                        .HasForeignKey("PromotieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Promotie");
-                });
-
             modelBuilder.Entity("vCatalogRazor.Models.Clasa", b =>
                 {
                     b.Navigation("Elevi");
@@ -324,8 +282,6 @@ namespace vCatalogRazor.Migrations
                     b.Navigation("Clase");
 
                     b.Navigation("Elevi");
-
-                    b.Navigation("Module");
                 });
 #pragma warning restore 612, 618
         }

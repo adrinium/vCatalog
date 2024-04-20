@@ -1,0 +1,214 @@
+﻿@page
+@model vCatalogRazor.Pages.elev.DeleteModel
+
+@{
+    ViewData["Title"] = "Ștergere";
+}
+
+<h1>Ștergere</h1>
+
+<h3>Doriți eliminarea acestui elev din baza de date?</h3>
+<div>
+    <h4>Elev</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Nume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Prenume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Prenume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.PrenumeTata)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.PrenumeTata)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.PrenumeMama)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.PrenumeMama)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.CNP)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.CNP)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.SerieNumarCI)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.SerieNumarCI)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.DataNastere)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.DataNastere)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.LocNastere)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.LocNastere)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Etnie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Etnie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Sex)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Sex)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.StareCivila)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.StareCivila)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.TelefonMobil)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.TelefonMobil)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.TelefonFix)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.TelefonFix)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Fotografie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Fotografie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaStrada)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaStrada)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaNumar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaNumar)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaBloc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaBloc)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaScara)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaScara)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaEtaj)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaEtaj)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaApartament)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaApartament)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaLocalitate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaLocalitate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.AdresaJudet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.AdresaJudet)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.NumarMatricol)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.NumarMatricol)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.CodBiblioteca)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.CodBiblioteca)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.CreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.CreatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.UpdatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.UpdatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.CreatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.CreatedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.ModifiedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.ModifiedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.IsDeleted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.IsDeleted)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Promotie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Promotie.Descriere)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elev.Clasa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elev.Clasa.Descriere)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Elev.Id" />
+        <input type="submit" value="Ștergere" class="btn btn-danger" /> |
+        <a asp-page="./Index">Înapoi la listă</a>
+    </form>
+</div>

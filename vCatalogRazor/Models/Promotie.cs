@@ -15,5 +15,11 @@ namespace vCatalogRazor.Models
 
         //collection navigation
         public ICollection<Clasa> Clase { get; } = new List<Clasa>();
+
+        //collection navigation
+        public ICollection<Elev> Elevi { get; set; } = new List<Elev>();
+
+        //collection navigation
+        public ICollection<Modul> Module { get; set; } = new List<Modul>();
     }
 }

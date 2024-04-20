@@ -1,0 +1,228 @@
+﻿@page
+@model vCatalogRazor.Pages.elev.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Listă elevi</h1>
+
+<p>
+    <a asp-page="Create">Adaugă elev</a>
+</p>
+<table class="table table-striped table-bordered">
+    <thead class="table-primary">
+        <tr>
+            <th>
+                Nume
+            </th>
+            <th>
+                Prenume
+            </th>
+            <th>
+                Prenume tata
+            </th>
+@*             <th>
+                @Html.DisplayNameFor(model => model.Elev[0].PrenumeMama)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].CNP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].SerieNumarCI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].DataNastere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].LocNastere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].Etnie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].StareCivila)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].TelefonMobil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].TelefonFix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].Fotografie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaStrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaNumar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaBloc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaScara)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaEtaj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaApartament)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaLocalitate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].AdresaJudet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].NumarMatricol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].CodBiblioteca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].UpdatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].ModifiedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Elev[0].IsDeleted)
+            </th> *@
+            <th>
+                Promotie
+            </th>
+            <th>
+                Clasa
+            </th>
+            <th>Acțiuni</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Elev) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrenumeTata)
+            </td>
+           @*  <td>
+                @Html.DisplayFor(modelItem => item.PrenumeMama)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CNP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SerieNumarCI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNastere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocNastere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etnie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StareCivila)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonMobil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefonFix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fotografie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaStrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaNumar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaBloc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaScara)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaEtaj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaApartament)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaLocalitate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresaJudet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumarMatricol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodBiblioteca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td> *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Promotie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clasa)
+            </td>
+            <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm mx-1" title="Editare">
+                        <i class="bi bi-pencil"></i>
+                    </a>
+                    <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-outline-success btn-sm mx-1" title="Detalii">
+                        <i class="bi bi-list"></i>
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm mx-1" title="Ștergere">
+                        <i class="bi bi-trash-fill"></i>
+                    </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

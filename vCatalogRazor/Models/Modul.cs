@@ -2,26 +2,23 @@
 
 namespace vCatalogRazor.Models
 {
-    public class Clasa
+    public class Modul
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string? Nume { get; set; }
+        public int Numar { get; set; }
         [Required]
+        public string? Nume { get; set; }
         public string? Descriere { get; set; }
         [Required]
-        public bool IsDeleted { get; set; }
+        public int IsDeleted { get; set; }
+        [Required]
+        public int IsActiveInAvg { get; set; }
 
         // reference navigation
         public int PromotieId { get; set; }
         public Promotie Promotie { get; set; } = null!;
 
-        // reference navigation diriginte
-        public int? ProfesorId { get; set; }
-        public Profesor? Profesor { get; set; }
-
-        // collection navigation
-        public ICollection<Elev> Elevi { get; set; } = new List<Elev>();
     }
 }

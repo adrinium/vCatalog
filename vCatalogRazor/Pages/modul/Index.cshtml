@@ -1,0 +1,66 @@
+﻿@page
+@model vCatalogRazor.Pages.modul.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Modul[0].Numar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modul[0].Nume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modul[0].Descriere)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modul[0].IsDeleted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modul[0].IsActiveInAvg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modul[0].Promotie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Modul) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descriere)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsDeleted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActiveInAvg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Promotie.Descriere)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

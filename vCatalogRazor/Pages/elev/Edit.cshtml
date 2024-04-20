@@ -1,0 +1,190 @@
+﻿@page
+@model vCatalogRazor.Pages.elev.EditModel
+
+@{
+    ViewData["Title"] = "Editare";
+}
+
+<h1>Editare</h1>
+
+<h4>Elev</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Elev.Id" />
+            <div class="form-group">
+                <label asp-for="Elev.Nume" class="control-label"></label>
+                <input asp-for="Elev.Nume" class="form-control" />
+                <span asp-validation-for="Elev.Nume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.Prenume" class="control-label"></label>
+                <input asp-for="Elev.Prenume" class="form-control" />
+                <span asp-validation-for="Elev.Prenume" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.PrenumeTata" class="control-label"></label>
+                <input asp-for="Elev.PrenumeTata" class="form-control" />
+                <span asp-validation-for="Elev.PrenumeTata" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.PrenumeMama" class="control-label"></label>
+                <input asp-for="Elev.PrenumeMama" class="form-control" />
+                <span asp-validation-for="Elev.PrenumeMama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.CNP" class="control-label"></label>
+                <input asp-for="Elev.CNP" class="form-control" />
+                <span asp-validation-for="Elev.CNP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.SerieNumarCI" class="control-label"></label>
+                <input asp-for="Elev.SerieNumarCI" class="form-control" />
+                <span asp-validation-for="Elev.SerieNumarCI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.DataNastere" class="control-label"></label>
+                <input asp-for="Elev.DataNastere" class="form-control" />
+                <span asp-validation-for="Elev.DataNastere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.LocNastere" class="control-label"></label>
+                <input asp-for="Elev.LocNastere" class="form-control" />
+                <span asp-validation-for="Elev.LocNastere" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.Etnie" class="control-label"></label>
+                <input asp-for="Elev.Etnie" class="form-control" />
+                <span asp-validation-for="Elev.Etnie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.Sex" class="control-label"></label>
+                <input asp-for="Elev.Sex" class="form-control" />
+                <span asp-validation-for="Elev.Sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.StareCivila" class="control-label"></label>
+                <input asp-for="Elev.StareCivila" class="form-control" />
+                <span asp-validation-for="Elev.StareCivila" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.TelefonMobil" class="control-label"></label>
+                <input asp-for="Elev.TelefonMobil" class="form-control" />
+                <span asp-validation-for="Elev.TelefonMobil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.TelefonFix" class="control-label"></label>
+                <input asp-for="Elev.TelefonFix" class="form-control" />
+                <span asp-validation-for="Elev.TelefonFix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.Email" class="control-label"></label>
+                <input asp-for="Elev.Email" class="form-control" />
+                <span asp-validation-for="Elev.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.Fotografie" class="control-label"></label>
+                <input asp-for="Elev.Fotografie" class="form-control" />
+                <span asp-validation-for="Elev.Fotografie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaStrada" class="control-label"></label>
+                <input asp-for="Elev.AdresaStrada" class="form-control" />
+                <span asp-validation-for="Elev.AdresaStrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaNumar" class="control-label"></label>
+                <input asp-for="Elev.AdresaNumar" class="form-control" />
+                <span asp-validation-for="Elev.AdresaNumar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaBloc" class="control-label"></label>
+                <input asp-for="Elev.AdresaBloc" class="form-control" />
+                <span asp-validation-for="Elev.AdresaBloc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaScara" class="control-label"></label>
+                <input asp-for="Elev.AdresaScara" class="form-control" />
+                <span asp-validation-for="Elev.AdresaScara" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaEtaj" class="control-label"></label>
+                <input asp-for="Elev.AdresaEtaj" class="form-control" />
+                <span asp-validation-for="Elev.AdresaEtaj" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaApartament" class="control-label"></label>
+                <input asp-for="Elev.AdresaApartament" class="form-control" />
+                <span asp-validation-for="Elev.AdresaApartament" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaLocalitate" class="control-label"></label>
+                <input asp-for="Elev.AdresaLocalitate" class="form-control" />
+                <span asp-validation-for="Elev.AdresaLocalitate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.AdresaJudet" class="control-label"></label>
+                <input asp-for="Elev.AdresaJudet" class="form-control" />
+                <span asp-validation-for="Elev.AdresaJudet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.NumarMatricol" class="control-label"></label>
+                <input asp-for="Elev.NumarMatricol" class="form-control" />
+                <span asp-validation-for="Elev.NumarMatricol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.CodBiblioteca" class="control-label"></label>
+                <input asp-for="Elev.CodBiblioteca" class="form-control" />
+                <span asp-validation-for="Elev.CodBiblioteca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.CreatedDate" class="control-label"></label>
+                <input asp-for="Elev.CreatedDate" class="form-control" />
+                <span asp-validation-for="Elev.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.UpdatedDate" class="control-label"></label>
+                <input asp-for="Elev.UpdatedDate" class="form-control" />
+                <span asp-validation-for="Elev.UpdatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.CreatedBy" class="control-label"></label>
+                <input asp-for="Elev.CreatedBy" class="form-control" />
+                <span asp-validation-for="Elev.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.ModifiedBy" class="control-label"></label>
+                <input asp-for="Elev.ModifiedBy" class="form-control" />
+                <span asp-validation-for="Elev.ModifiedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Elev.IsDeleted" /> @Html.DisplayNameFor(model => model.Elev.IsDeleted)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.PromotieId" class="control-label"></label>
+                <select asp-for="Elev.PromotieId" class="form-control" asp-items="ViewBag.PromotieId"></select>
+                <span asp-validation-for="Elev.PromotieId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elev.ClasaId" class="control-label"></label>
+                <select asp-for="Elev.ClasaId" class="form-control" asp-items="ViewBag.ClasaId"></select>
+                <span asp-validation-for="Elev.ClasaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvare" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Înapoi la listă</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
