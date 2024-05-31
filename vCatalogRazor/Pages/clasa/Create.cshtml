@@ -13,13 +13,13 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Clasa.Nume" class="control-label"></label>
+            <div class="mb-3">
+                <label asp-for="Clasa.Nume" class="form-label"></label>
                 <input asp-for="Clasa.Nume" class="form-control" />
                 <span asp-validation-for="Clasa.Nume" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Clasa.Descriere" class="control-label"></label>
+            <div class="mb-3">
+                <label asp-for="Clasa.Descriere" class="form-label"></label>
                 <input asp-for="Clasa.Descriere" class="form-control" />
                 <span asp-validation-for="Clasa.Descriere" class="text-danger"></span>
             </div>
@@ -28,23 +28,20 @@
                     <input class="form-check-input" asp-for="Clasa.IsDeleted" /> @Html.DisplayNameFor(model => model.Clasa.IsDeleted)
                 </label>
             </div>
-            <div class="form-group">
-                <label asp-for="Clasa.PromotieId" class="control-label"></label>
+            <div class="mb-3">
+                <label asp-for="Clasa.PromotieId" class="form-label">Promoția</label>
                 <select asp-for="Clasa.PromotieId" class ="form-control" asp-items="ViewBag.PromotieId"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Clasa.ProfesorId" class="control-label"></label>
+            <div class="mb-3">
+                <label asp-for="Clasa.ProfesorId" class="form-label">Diriginte</label>
                 <select asp-for="Clasa.ProfesorId" class ="form-control" asp-items="ViewBag.ProfesorId"></select>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <div class="mb-3">
+                <input type="submit" value="Adaugă" class="btn btn-primary" />
+                <a asp-page="Index" class="btn btn-info">Înapoi</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

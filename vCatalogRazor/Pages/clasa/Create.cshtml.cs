@@ -21,8 +21,8 @@ namespace vCatalogRazor.Pages.clasa
 
         public IActionResult OnGet()
         {
-        ViewData["ProfesorId"] = new SelectList(_context.Profesori, "Id", "Grad");
-        ViewData["PromotieId"] = new SelectList(_context.Promotii, "Id", "Descriere");
+            ViewData["ProfesorId"] = new SelectList(_context.Profesori, "Id", "Nume");
+            ViewData["PromotieId"] = new SelectList(_context.Promotii, "Id", "Nume");
             return Page();
         }
 

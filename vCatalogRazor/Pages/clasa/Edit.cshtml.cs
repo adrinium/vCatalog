@@ -30,14 +30,14 @@ namespace vCatalogRazor.Pages.clasa
                 return NotFound();
             }
 
-            var clasa =  await _context.Clase.FirstOrDefaultAsync(m => m.Id == id);
+            var clasa = await _context.Clase.FirstOrDefaultAsync(m => m.Id == id);
             if (clasa == null)
             {
                 return NotFound();
             }
             Clasa = clasa;
-           ViewData["ProfesorId"] = new SelectList(_context.Profesori, "Id", "Grad");
-           ViewData["PromotieId"] = new SelectList(_context.Promotii, "Id", "Descriere");
+            ViewData["ProfesorId"] = new SelectList(_context.Profesori, "Id", "Grad");
+            ViewData["PromotieId"] = new SelectList(_context.Promotii, "Id", "Descriere");
             return Page();
         }
 
